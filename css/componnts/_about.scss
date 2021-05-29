@@ -1,0 +1,115 @@
+
+ .content.containers{
+  background: var(--content-container-bg);
+  opacity: 1 !important;
+  width: 90%;
+  .about{
+  .left{
+    display: flex;
+    flex-direction: column;
+   h2{
+    color: var(--about-heading-color);
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+   }
+   p{
+    color: var(--about-details-color );
+    font-size: 16px;
+    line-height: 2.2rem;
+    letter-spacing: 0.1px;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    span{
+      color:var(--about-span-color);
+      font-weight: 600;
+    }
+   }
+   .button{
+    background-color: var(--about-redmore-button-bg);
+    color: var(--about-redmore-button-color);
+    padding: 4px 8px;
+    font-size: 12px;
+    border: none;
+    line-height: 24px;
+    outline: none;
+    cursor: pointer;
+    align-self: center;
+    transition: all 500ms ease-in-out;
+    border: 1px solid var(--about-redmore-button-border-color);
+    margin-bottom: 3rem;
+    &:hover{
+      background-color: var(--about-redmore-button-hover-bg);
+      color: var(--about-redmore-button-hover-color);
+      border: 1px solid var(--about-redmore-button-border-hover-color);
+    }
+   }
+  }
+
+
+  .right{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    .image{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-image: url(../image/auto.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+ }
+}
+
+@mixin about-tablet() {
+  .content{
+   .about{
+     .wrapper{
+       .right{
+         height: 400px;
+       }
+  }
+  }
+}
+}
+
+
+@mixin about-desktop() {
+  .content{
+    margin-top: -30px;
+   width: 1140px !important;
+   .about{
+     .wrapper{
+       display: flex;
+       flex-direction: row;
+       padding: 0 !important;
+      .left{
+         flex: 0 0 50%;
+         padding:2rem !important;
+         p{
+          margin-bottom: 4rem;
+        }
+         .button{
+           margin-bottom: 5rem !important;
+         }
+       }
+       .right{
+        height: 300px;
+        display: flex;
+        flex: 0 0 50%;
+        margin-top: 0;
+        .image{
+          margin-left: 7rem;
+          width: 80%;
+        }
+       }
+     }
+  }
+  }
+}

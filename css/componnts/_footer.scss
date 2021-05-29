@@ -1,0 +1,18 @@
+footer.containers{
+ width: 90%;
+ background: var(--footer-bg);
+ text-align: center;
+ padding: 2rem 0;
+ font-size: 14px;
+ color: var(--footer-color);
+ span{
+  font-size: 20px !important;
+  font-family: 'Roboto Slab', serif;
+ }
+}
+
+@mixin footer-desktop-large(){
+ footer{
+  width: 1140px !important;
+ }
+}

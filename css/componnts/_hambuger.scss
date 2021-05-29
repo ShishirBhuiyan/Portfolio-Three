@@ -1,0 +1,77 @@
+
+.menu {
+  //padding: 2rem 1rem;
+  padding: 1.2rem .5rem;
+  position: fixed;
+  top: 5%;
+  right: 10%;
+  background-color: var(--menu-bg);
+  z-index: 11;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 650ms;
+  border: 1px solid var(--menu-border-color);
+  transition: background 650ms;
+
+  .two,
+  .two:before,
+  .two:after{
+    height: 3px;
+    //width: 25px;
+    width: 22px;
+    border-radius: 20px;
+    transition: .5s;
+    position: relative;
+    background-color: var(--menu-line-bg);
+   }
+ 
+   .two:before{
+    content: "";
+    position: absolute;
+    transform: translateY(-7px);
+   }
+ 
+   .two:after{
+    content: "";
+    position: absolute;
+    transform: translateY(7px);
+   }
+ 
+   .two.active{
+    transform: translateX(-30px);
+    background-color: transparent;
+    box-shadow: unset;
+   }
+ 
+  .two.active:before{
+    transform: rotate(45deg) translate(22px, -22px);
+   }
+   .two.active:after{
+    transform: rotate(-45deg) translate(22px, 22px);
+   }
+   
+ }
+ 
+
+@mixin hamburger-tablet(){
+  .menu {
+    padding: 1.5rem .8rem;
+    .two,
+    .two:before,
+    .two:after{
+      width: 25px;
+    }
+  }
+}
+
+@mixin hamburger-laptop() {
+  .menu{
+   display: none;
+  }
+ }
+
+

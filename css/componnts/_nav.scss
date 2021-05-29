@@ -1,0 +1,199 @@
+.navigation{
+  background: url(../image/s1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index:10;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 650ms;
+  nav{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center !important;
+   justify-content: space-evenly;
+   padding-bottom: 22rem;
+   position: relative;
+   z-index: 12;
+   .top{
+    margin-top: -100px;
+    .logo{
+     height: 250px;
+     width: 250px;
+     border-radius: 50%;
+     background-image: url(../image/logos.png);
+     background-size: cover;
+     background-position: center;
+    }
+   }
+ 
+   .bottom{
+    align-self: flex-start;
+    ul{
+     position: absolute;
+     left: 0;
+     width: 100%;
+     margin-top: -160px;
+     list-style-type: none;
+     //border: 1px solid red;
+     .list{
+      //border: 1px solid red;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.3rem;
+      overflow: hidden;
+      margin-bottom: 10px;
+      .span1,
+      .span2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 350ms;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .span1{
+       display: none;
+      }
+      .span2{
+       a{
+         color: var(--nav-span1-color);
+       }
+      }
+      &:hover .span2 a{
+        color:var(--nav-span2-color) !important;
+        text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5), 2px 2px 19px rgba(206,89,55,0);
+      }
+     }
+    }
+   }
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0,0,0,0.8);
+  }
+}
+
+.open{
+ transform: translateX(0%);
+}
+
+@mixin nav-laptop() {
+  .navigation{
+    z-index: 12;
+    background: none !important;
+    background: var(--body-bg) !important;
+    height:70px;
+    transform: translateX(0%);
+    padding: 0;
+    
+    
+    nav{
+    width: 90%;
+    background: var(--nav-laptop-bg) !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px ;
+    justify-content: space-between !important;
+     height:70px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     margin: 0 auto;
+     padding-bottom: 0rem;
+     padding-top: 0;
+     .top{
+      margin-top: 0px;
+      align-self: flex-start;
+      .logo{
+        height: 150px;
+        width: 150px;
+       border: none;
+       border-color: transparent;
+       border-radius: 0;
+       height: 65px;
+      }
+     }
+     .bottom{
+      display: flex;
+      align-items: center !important;
+      justify-content: center !important;
+      position: relative;
+      height: 70px;
+      width:500px;
+      ul{
+      margin-top: 0px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       .list{
+         .span1{
+             margin-bottom: -20px;
+            color: var(--nav-span1-color);
+            display: block;
+            color: var(--nav-span1-mode-color);
+         }
+         .span2{
+          transform: translateY(4rem);
+           a{
+            color: var(--nav-span2-mode-color) !important;
+           }
+
+         }
+         
+       &:hover .span1{
+        transform: translateY(-3.5rem);
+       }
+       &:hover .span2{
+        transform: translateY(0);
+         a{
+          color: var(--nav-span2-mode-color) !important;
+         }
+       }
+      }
+       }
+      }
+      }
+     }
+     &::after{
+       background-color: rgba(0,0,0,0) !important;
+     }
+    }
+
+
+@mixin nav-desktop() {
+
+ }
+
+ @mixin nav-dextoplarge() {
+  .navigation{
+    nav{
+      width: 1140px !important;
+      .bottom{
+        ul{
+          margin-top: 8px;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center!important;
+          .list{
+            margin-top: 10px;
+          }
+      }
+    }
+  }
+}
+ }

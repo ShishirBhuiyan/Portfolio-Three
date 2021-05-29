@@ -1,0 +1,144 @@
+
+#popup{
+ position:fixed;
+ top: 40%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ width: 90% !important;
+ height: 100vh;
+ padding: 0px 10px;
+ visibility: hidden;
+ opacity: 0;
+ transition: .5s;
+ z-index: 20;
+
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+  
+  
+ .left{
+  position: relative;
+   padding-top: 30px;
+   height: 50vh;
+  .text{
+      h2{
+       color: var(--about-popup-heading );
+       align-self: flex-start;
+     }
+     p{
+       color: var(--about-popup-color);
+     }
+ 
+     .back{
+       position: absolute;
+       right: 6%;
+       a{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         transition: all 650ms ease-in-out;
+         i{
+           font-size:18px;
+           transition: all 650ms ease-in-out;
+           color: var(--about-popup-close-i-color);
+         }
+ 
+         span{
+           color: var(--about-popup-close-span-color);
+           margin-left: 7px;
+           font-size: 16px;
+         }
+               
+        &:hover{
+          
+          i{
+           padding-right: 5px;
+            color: var(--about-popup-close-i-hover-color);
+          }
+          span{
+             padding-right: 0px;
+          }
+        }
+       }
+     }
+  }
+ 
+ }
+ .rights{
+   height: 40vh;
+   width: 100%;
+   position: relative;
+   .image{
+    height: 40vh;
+    width: 100%;position: absolute;
+     background-image: url(../image/s1.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+   }
+ }
+}
+
+
+
+
+#popup.active{
+top: 50%;
+visibility: visible;
+opacity: 1 !important;
+transition: .5s;
+}
+
+@mixin read-more-tablet(){
+#popup{
+  .left{
+    height: 40vh;
+  }
+  .rights{
+    padding-top: 5vh;
+     height: 50vh !important;
+     .image{
+      height: 45vh !important;
+     }
+   }
+}
+}
+
+@mixin read-more-laptop(){
+  #popup{
+    flex-direction: row;
+    .left{
+      padding-top: 10px;
+      padding-left: 15px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      height: 40vh;
+    }
+    .rights{
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-top: 0vh;
+       height: 40vh !important;
+       .image{
+        height: 40vh !important;
+       }
+     }
+  }
+}
+
+
+@mixin read-more-desktop(){
+ #popup{
+  width: 80% !important;
+  .left{
+   justify-content: space-evenly !important;
+  }
+ }
+}
+@mixin read-more-desktoplarge(){
+  #popup{
+   width: 70% !important;
+  }
+ }

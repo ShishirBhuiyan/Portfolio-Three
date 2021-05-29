@@ -1,0 +1,140 @@
+@import './componnts/variable';
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html{
+	overflow-x: hidden !important;
+ scroll-behavior: smooth;
+}
+#body {
+	font-family: 'IBM Plex Sans', sans-serif;
+	background-image: var(--body-bg);
+	background-position: center;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden !important;
+}
+
+
+#body.read{
+	opacity: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	motion: 0;
+	line-height: 1;
+}
+a,
+a:hover {
+	text-decoration: none !important;
+}
+.containers {
+	max-width: 100%;
+	margin: 0 auto;
+}
+section{
+	padding: 3rem;
+}
+
+
+
+.section_heading{
+		font-size: 16px;
+		font-weight: 500;
+		color: var(--section-heading-color);
+		margin-bottom: 3rem !important;
+		text-shadow: 0 0 1px rgba(40, 54, 95, 0.1);
+		position: relative;
+		margin-bottom: 2px;
+		&::before{
+			content: '';
+			height: 2px;
+			width: 100px;
+			position: absolute;
+			top: 20px;
+			left: 10px;
+			background-color:  var(--section-heading-before-after-color);
+		
+		}
+		&::after{
+			content: '';
+			height: 2px;
+			width: 100px;
+			position: absolute;
+			top: 24px;
+			left: 0;
+			background-color:  var(--section-heading-before-after-color) !important;
+	}
+}
+
+
+.section_heading_about::before,
+.section_heading_about::after{
+  width: 80px;
+}
+
+@import './componnts/color-mode';
+@import './componnts/loading';
+@import './componnts/hambuger';
+@import './componnts/overlay';
+@import './componnts/nav';
+@import './componnts/profile';
+@import './componnts/about';
+@import './componnts/readmore-modal';
+@import './componnts/pop-overlay';
+@import './componnts/education_experence';
+@import './componnts/contact';
+@import './componnts/footer';
+@import './componnts/top-bottom';
+@import './componnts/auto-popup';
+
+
+
+
+@media screen and(min-width:400px){
+	@include profile-tablet();
+	@include hamburger-tablet();
+	@include autopopup-tablet();
+
+}
+
+@media screen and(min-width:500px){
+	@include profile-pro-tablet();
+	@include about-tablet();
+	@include read-more-tablet();
+}
+
+
+@media screen and(min-width:768px){
+	@include hamburger-laptop();
+	@include nav-laptop(); 
+	@include profile-laptop();
+	@include overlay-laptop();
+	@include top-bottom-laptop();
+	@include loader-laptop();
+@include autopopup-laptop();
+@include  read-more-laptop();
+}
+@media screen and(min-width:900px){
+	@include nav-desktop();
+	@include profile-desktop();
+	@include read-more-desktop();
+	@include education-experience-desktop();
+	@include contact-desktop();
+	@include autopopup-desktop();
+	@include about-desktop();
+	
+}
+
+@media screen and(min-width:1200px){
+	@include nav-dextoplarge();
+	@include contact-desktop-largr();
+	@include footer-desktop-large();
+	@include top-bottom-large();
+	@include  read-more-desktoplarge();
+}

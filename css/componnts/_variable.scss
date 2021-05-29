@@ -1,0 +1,192 @@
+html{
+ --body-bg: url(../image/okk.jpg);
+ --section-heading-color : #027cff;
+--section-heading-before-after-color : #4a0000;
+
+
+
+--pop-overlay-bg: url(../image/okk.jpg);
+--nav-laptop-bg: rgba(0, 0, 0, 0) linear-gradient(to top, rgb(0, 4, 40), rgb(0, 78, 146)) repeat scroll 0% 0% !important;
+--nav-span1-color : #fff;
+--nav-span2-color : red;
+--nav-span1-mode-color : rgb(253, 253, 253);
+--nav-span2-mode-color : rgb(185, 3, 3);
+
+--profile-bg : rgba(0, 4, 40);
+--profile-avatar-span-bg : #17a2b8;
+--profile-avatar-span-color : #fff;
+--profile-name-color : #b1bbda;
+--profile-hedline-animation-color : #848ba0;
+--profile-contact-color : #eff2f9;
+--profile-social-color: #fff; 
+--profile-social1-bg : #4ac7ec;
+--profile-social2-bg : #ff5da0;
+--profile-social3-bg : #4d79f6;
+--profile-social4-bg :#8997bd;
+
+
+--menu-bg : #011636;
+--menu-hover-bg : #fff;
+--menu-line-bg : #bdaacc;
+--menu-line-hover-bg : #000000;
+--menu-border-color : #fff;
+
+
+--content-container-bg :  rgba(0, 4, 40);
+--about-heading-color : #5c86fd;
+--about-details-color : #bdaacc;
+--about-redmore-button-bg : #0a2171;
+--about-redmore-button-hover-bg : #000;
+--about-redmore-button-color : #9199af;
+--about-redmore-button-hover-color : red;
+;
+--about-redmore-button-border-color : #0a2171;
+--about-redmore-button-border-hover-color : red;
+
+--about-popup-heading : #fff;
+--about-popup-color : #818181;
+--about-popup-close-i-color:#b9b9b9; 
+--about-popup-close-span-color: #fdfdfd;
+--about-popup-close-i-hover-color: rgb(192, 0, 0);
+
+--skill-heading-color : #7081b9;
+--skill-item-date-color : #767477;
+--skill-iten-center-color : #7081b9; 
+--skill-dotted-line-color : #85807a;
+--skill-item-after-color : #045b96;
+--skill-progress-div-bg : #13203d;
+--skill-progress-div-shadow :  #4d79f6;
+--skill-progress-runner-bg : #4d79f6;
+--skill-progress-runner-after-color : #ffee07;
+--skill-progress-tooltip-color : #fff;
+
+--footer-bg : rgba(0, 0, 0, 0) linear-gradient(to top, #000428, #004e92) repeat scroll 0% 0%;
+--footer-color : #fff;
+
+--top-up-bg : #8a0774;
+--top-up-bg-shadow1 : rgba(245, 241, 241, 0.1);
+--top-up-bg-shadow2 : #420238;
+--before-shadow : rgba(5, 6, 56, 0.8);
+--top-up-hover-bg : #929290;
+--top-up-one-color : #ffff;
+--top-up-two-color : #bb079d;
+
+
+
+
+--contact-heading-color : #fff;
+--contact-before-after-bg : red;
+--contact-input-border-color : #fff;
+--contact-label-color: rgb(150, 141, 141);
+--contact-close-color:#fff;
+--contact-close-shadow: black;
+--contact-close-hover-color: rgb(190, 0, 0); 
+
+--contact-submit-bg :  #00779b;
+--contact-submit-color :  #ffffff;
+--contact-submit-hover-bg :  #048ab3;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html[data-theme='light']{ 
+ --body-bg: url(../image/ok.png);
+ --section-heading-color : rgb(0, 0, 0);
+--section-heading-before-after-color : rgb(0, 0, 0);
+ --profile-bg: rgba(0, 0, 0, 0) linear-gradient(rgb(0, 4, 40), rgb(0, 78, 146)) repeat scroll 0% 0% !important;
+
+
+ --pop-overlay-bg: url(../image/ok.png);
+
+ --nav-laptop-bg: #bbbbbb !important;
+ --nav-span1-mode-color : rgb(0, 0, 0);
+ --nav-span2-mode-color :#73174a !important;
+
+ --profile-bg :url(../image/ok.png) !important;
+--profile-avatar-span-bg : #000000;
+--profile-avatar-span-color : #fff;
+--profile-name-color : #01071a;
+--profile-hedline-animation-color : #000000;
+--profile-contact-color : #000000;
+
+--profile-social1-bg : #000000;
+--profile-social2-bg : #000000;
+--profile-social3-bg : #000000;
+--profile-social4-bg :#000000;
+
+
+--content-container-bg :url(../image/ok.png) !important;
+
+--about-heading-color : #000000;
+--about-details-color : #000000;
+--about-span-color: #1d253c;
+
+--about-popup-heading : rgb(0, 0, 0);
+--about-popup-color : #111010;
+
+--about-popup-close-i-color:#111010; 
+--about-popup-close-span-color: #181515;
+--about-popup-close-i-hover-color: rgb(73, 0, 0);
+
+--skill-heading-color : #000000;
+--skill-item-date-color : #000000;
+--skill-iten-center-color : #4b4b4b; 
+--skill-dotted-line-color : #494949;
+--skill-item-after-color : #000000;
+
+--skill-progress-div-bg : #f6f7f8;
+--skill-progress-div-shadow :  #5c5c5c;
+--skill-progress-runner-bg : #000000;
+--skill-progress-runner-after-color : #a00085 !important;
+--skill-progress-tooltip-color : rgb(0, 0, 0);
+
+--footer-bg : #bbbbbb !important;
+--footer-color : rgb(0, 0, 0);
+
+--top-up-bg : #ffffff;
+--top-up-bg-shadow1 : rgba(245, 241, 241, 0.1);
+--top-up-bg-shadow2 : #000000;
+--before-shadow : rgba(145, 145, 145, 0.8);
+--top-up-hover-bg : #000000;
+--top-up-one-color : rgb(0, 0, 0);
+--top-up-two-color : #ffffff;
+
+
+--contact-heading-color : rgb(0, 0, 0);
+--contact-before-after-bg : rgb(0, 0, 0);
+--contact-input-border-color : rgb(0, 0, 0);
+--contact-label-color: rgb(0, 0, 0);
+--contact-close-color:rgb(0, 0, 0);
+--contact-submit-bg :  #020e11;
+--contact-submit-color :  #ffffff;
+--contact-submit-hover-bg :  #161616;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

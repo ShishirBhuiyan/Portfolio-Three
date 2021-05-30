@@ -1,12 +1,11 @@
 
 .menu {
-  //padding: 2rem 1rem;
   padding: 1.2rem .5rem;
   position: fixed;
-  top: 5%;
+  top: 3%;
   right: 10%;
-  background-color: var(--menu-bg);
-  z-index: 110;
+  background-color: rgb(3, 3, 100);
+  z-index: 50;
   border-radius: 3px;
   cursor: pointer;
   display: flex;
@@ -14,64 +13,72 @@
   justify-content: center;
   overflow: hidden;
   transition: all 650ms;
-  border: 1px solid var(--menu-border-color);
-  transition: background 650ms;
 
-  .two,
-  .two:before,
-  .two:after{
+  .line,
+  .line:before,
+  .line:after{
     height: 3px;
-    //width: 25px;
-    width: 22px;
+    width: 25px;
     border-radius: 20px;
     transition: .5s;
     position: relative;
-    background-color: var(--menu-line-bg);
+    background-color: white;
    }
  
-   .two:before{
+   .line:before{
     content: "";
+    width: 16px !important; 
     position: absolute;
     transform: translateY(-7px);
+    background-color: #ad1439 !important;
    }
  
-   .two:after{
+   .line:after{
     content: "";
+    width: 16px !important; 
+    right: 0;
     position: absolute;
     transform: translateY(7px);
+    background-color: #ad1439 !important;
    }
  
-   .two.active{
+   .line.active{
     transform: translateX(-30px);
     background-color: transparent;
     box-shadow: unset;
    }
  
-  .two.active:before{
+  .line.active:before{
     transform: rotate(45deg) translate(22px, -22px);
    }
-   .two.active:after{
+   .line.active:after{
     transform: rotate(-45deg) translate(22px, 22px);
    }
    
  }
  
 
-@mixin hamburger-tablet(){
+@mixin md-hamburger(){
   .menu {
     padding: 1.5rem .8rem;
-    .two,
-    .two:before,
-    .two:after{
+    .line,
+    .line:before,
+    .line:after{
       width: 25px;
     }
   }
 }
 
-@mixin hamburger-laptop() {
+@mixin lg-hamburger() {
   .menu{
-   display: none;
+    right: 9% !important;
   }
- }
+}
+
+@mixin xl-hamburger() {
+  .menu{
+    right: 15% !important;
+  }
+}
 
 

@@ -34,13 +34,13 @@ $(document).ready(function() {
 
 
     $(".menu").click(function() {
-        $(".menu .two").toggleClass("active");
+        $(".menu .line").toggleClass("active");
          $(".navigation").toggleClass("open");
           $(".overlay").toggleClass("openoverlay");
     });
    
     $(".list .span2").click(function() {
-        $(".menu .two").toggleClass("active");
+        $(".menu .line").toggleClass("active");
          $(".navigation").toggleClass("open");
           $(".overlay").toggleClass("openoverlay");
     });

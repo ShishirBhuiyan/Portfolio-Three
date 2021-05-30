@@ -98,7 +98,6 @@ section{
 
 @media screen and(min-width:400px){
 	@include profile-tablet();
-	@include hamburger-tablet();
 	@include autopopup-tablet();
 
 }
@@ -111,14 +110,14 @@ section{
 
 
 @media screen and(min-width:768px){
-	@include hamburger-laptop();
 	@include nav-laptop(); 
 	@include profile-laptop();
 	@include overlay-laptop();
 	@include top-bottom-laptop();
 	@include loader-laptop();
-@include autopopup-laptop();
-@include  read-more-laptop();
+	@include autopopup-laptop();
+	@include  read-more-laptop();
+	@include md-hamburger();
 }
 @media screen and(min-width:900px){
 	@include nav-desktop();
@@ -128,6 +127,7 @@ section{
 	@include contact-desktop();
 	@include autopopup-desktop();
 	@include about-desktop();
+	@include lg-hamburger();
 	
 }
 
@@ -137,4 +137,5 @@ section{
 	@include footer-desktop-large();
 	@include top-bottom-large();
 	@include  read-more-desktoplarge();
+	@include xl-hamburger();
 }

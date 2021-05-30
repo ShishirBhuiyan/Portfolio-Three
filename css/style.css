@@ -602,10 +602,10 @@ section {
 .menu {
   padding: 1.2rem .5rem;
   position: fixed;
-  top: 5%;
+  top: 3%;
   right: 10%;
-  background-color: var(--menu-bg);
-  z-index: 110;
+  background-color: #030364;
+  z-index: 50;
   border-radius: 3px;
   cursor: pointer;
   display: -webkit-box;
@@ -620,38 +620,40 @@ section {
   overflow: hidden;
   -webkit-transition: all 650ms;
   transition: all 650ms;
-  border: 1px solid var(--menu-border-color);
-  -webkit-transition: background 650ms;
-  transition: background 650ms;
 }
 
-.menu .two,
-.menu .two:before,
-.menu .two:after {
+.menu .line,
+.menu .line:before,
+.menu .line:after {
   height: 3px;
-  width: 22px;
+  width: 25px;
   border-radius: 20px;
   -webkit-transition: .5s;
   transition: .5s;
   position: relative;
-  background-color: var(--menu-line-bg);
+  background-color: white;
 }
 
-.menu .two:before {
+.menu .line:before {
   content: "";
+  width: 16px !important;
   position: absolute;
   -webkit-transform: translateY(-7px);
           transform: translateY(-7px);
+  background-color: #ad1439 !important;
 }
 
-.menu .two:after {
+.menu .line:after {
   content: "";
+  width: 16px !important;
+  right: 0;
   position: absolute;
   -webkit-transform: translateY(7px);
           transform: translateY(7px);
+  background-color: #ad1439 !important;
 }
 
-.menu .two.active {
+.menu .line.active {
   -webkit-transform: translateX(-30px);
           transform: translateX(-30px);
   background-color: transparent;
@@ -659,12 +661,12 @@ section {
           box-shadow: unset;
 }
 
-.menu .two.active:before {
+.menu .line.active:before {
   -webkit-transform: rotate(45deg) translate(22px, -22px);
           transform: rotate(45deg) translate(22px, -22px);
 }
 
-.menu .two.active:after {
+.menu .line.active:after {
   -webkit-transform: rotate(-45deg) translate(22px, 22px);
           transform: rotate(-45deg) translate(22px, 22px);
 }
@@ -1666,14 +1668,6 @@ footer.containers span {
   .header .profile .bottom ul.socials li a i {
     font-size: 18px;
   }
-  .menu {
-    padding: 1.5rem .8rem;
-  }
-  .menu .two,
-  .menu .two:before,
-  .menu .two:after {
-    width: 25px;
-  }
   #popupse {
     width: 80% !important;
     height: 50vh;
@@ -1704,9 +1698,6 @@ footer.containers span {
 }
 
 @media screen and (min-width: 768px) {
-  .menu {
-    display: none;
-  }
   .navigation {
     z-index: 12;
     background: none !important;
@@ -1921,6 +1912,14 @@ footer.containers span {
   #popup .rights .image {
     height: 40vh !important;
   }
+  .menu {
+    padding: 1.5rem .8rem;
+  }
+  .menu .line,
+  .menu .line:before,
+  .menu .line:after {
+    width: 25px;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -1997,6 +1996,9 @@ footer.containers span {
     margin-left: 7rem;
     width: 80%;
   }
+  .menu {
+    right: 9% !important;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -2030,6 +2032,9 @@ footer.containers span {
   }
   #popup {
     width: 70% !important;
+  }
+  .menu {
+    right: 15% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

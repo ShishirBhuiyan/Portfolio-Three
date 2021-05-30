@@ -605,7 +605,7 @@ section {
   top: 5%;
   right: 10%;
   background-color: var(--menu-bg);
-  z-index: 11;
+  z-index: 110;
   border-radius: 3px;
   cursor: pointer;
   display: -webkit-box;
